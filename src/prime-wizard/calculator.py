@@ -39,7 +39,9 @@ if __name__ == "__main__":
     results: List[int] = find_prime_numbers(max_range)
     print(f"Primes up to {max_range}: {results}")
 
+    #added for second commit on composites branch
     #Filter out all the primes in the range and get the composites
     numbers : list[int] = range(2,101)
     composites = list(filter(lambda x : True if  x not in results else False, numbers))
     print(f"Composites upto  {max_range} : {composites}")
+
