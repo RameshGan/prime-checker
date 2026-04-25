@@ -2,7 +2,7 @@
 import math
 from typing import List
 
-
+    x=5
 def find_prime_numbers(upper_limit: int) -> List[int]:
     """
     Finds all prime numbers up to a specified upper limit.
