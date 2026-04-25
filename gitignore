@@ -1,0 +1,34 @@
+# --- Python Junk ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+build/
+dist/
+
+# --- IDEs & Editors ---
+# Visual Studio Community "ghosts"
+*.sln
+*.pyproj
+*.user
+*.suo
+*.db
+# VS Code local settings
+.vscode/
+
+# --- Environment & Secrets ---
+# Never upload your API keys or secrets!
+.env
+.env.local
+
+# --- Docker & OS ---
+.docker/
+.DS_Store
+Thumbs.db
+
+# --- Kubernetes ---
+# (Usually we keep YAMLs, but ignore local logs/creds)
+*.log
+kubeconfig

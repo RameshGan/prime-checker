@@ -1,0 +1,11 @@
+[project]
+name = "prime_wizard"
+version = "0.1.0"
+description = "A PEP 8 compliant prime number finder"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [] # You'd list math or typing libraries if they weren't built-in
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
