@@ -34,6 +34,7 @@ def find_prime_numbers(upper_limit: int) -> List[int]:
 
 
 if __name__ == "__main__":
+    """Find all primes upto 100"""
     max_range: int = 100
     results: List[int] = find_prime_numbers(max_range)
     print(f"Primes up to {max_range}: {results}")
