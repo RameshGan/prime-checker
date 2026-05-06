@@ -1,4 +1,4 @@
-"""Finds the Primes using Erosthane's seive"""
+"""Finds the Primes using Ératosthène's sieve"""
 import math
 from typing import List
 
