@@ -32,3 +32,6 @@ Thumbs.db
 # (Usually we keep YAMLs, but ignore local logs/creds)
 *.log
 kubeconfig
+
+prime_wizard.egg-info
+.pytest_cache
