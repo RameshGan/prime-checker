@@ -40,16 +40,46 @@ def find_prime_numbers(upper_limit: int) -> List[int]:
 
     return prime_numbers
 
+def get_composite_numbers (upper_limit : int, prime_numbers  : list[int] | None = None) -> list[int]:
+    """Get composite number give a prime number list
+        If the numbers aren't provided calculate them first.
+    Args:
+        limit (int): Limit upto which primes need yto be found out
+        prime_numbers : List of prime numbers if already available.
+
+    Returns:
+        list[int]: List of composite numbers
+    """
+
+    number_range = range(2, upper_limit +1)
+    if prime_numbers is None:
+        primes  = find_prime_numbers(upper_limit)
+    else:
+        primes = prime_numbers
+
+    result = list(filter (lambda x : True if x not in primes else False, number_range ))
+    
+    return result
+    
+def print_number_list(numbers : list[int]) -> None:
+        """Print individual numbers from the list with proper formatting"""
+        print(*(f"{number:>6,}" for number in numbers), sep=", ")
 
 if __name__ == "__main__":
-    """Find all primes upto 100"""
-    max_range: int = 100
-    results: List[int] = find_prime_numbers(max_range)
-    print(f"Primes up to {max_range}: {results}")
+    """Find all primes upto 1000"""
+    max_range: int = 1010
+    primes : List[int] = find_prime_numbers( max_range)
+    print(f"Primes up to {max_range}" )
+    print_number_list(primes)
 
-    #added for second commit on composites branch
-    #Filter out all the primes in the range and get the composites
-    numbers : list[int] = range(2,101)
-    composites = list(filter(lambda x : True if  x not in results else False, numbers))
-    print(f"Composites upto  {max_range} : {composites}")
+    composites = get_composite_numbers(max_range)
+    print(f"Composite numbers  up to: {max_range}")
+    print_number_list(composites)
+
+    composites = get_composite_numbers(max_range, primes)
+    print(f"Composite numbers given primes upt o: {max_range}")
+    print_number_list(composites)
+
+
+
 
