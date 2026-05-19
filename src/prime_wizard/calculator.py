@@ -53,9 +53,9 @@ def get_composite_numbers (upper_limit : int, prime_numbers  : list[int] | None 
 
     number_range = range(2, upper_limit +1)
     if prime_numbers is None:
-        primes  = find_prime_numbers(upper_limit)
+        primes  = set(find_prime_numbers(upper_limit))
     else:
-        primes = prime_numbers
+        primes = set(prime_numbers)
 
     result = list(filter (lambda x : True if x not in primes else False, number_range ))
     
